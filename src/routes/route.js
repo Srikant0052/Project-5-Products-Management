@@ -10,7 +10,7 @@ const { authorisation } = require('../middleware/authorization');
 // User Api----
 router.post('/register', userController.registerUser);
 router.post('/login', userController.userLogin);
-router.get('/user/:userId', authorisation, userController.getUser);
+router.get('/user/:userId/profile', authorisation, userController.getUser);
 router.put('/user/:userId/profile', authorisation, userController.updateProfile);
 
 // Product Api-----
